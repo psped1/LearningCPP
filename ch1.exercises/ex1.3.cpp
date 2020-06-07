@@ -4,6 +4,7 @@ Write code that declares two vectors as arrays of double precision floating poin
 [See Section A.1.2. for a definition of the scalar product, and Sect. A.1.5 fo a definition of the Euclidan norm of a vector.]
 */
 #include <iostream>
+#include <cmath>
 
 int main(int argc, char* argv[])
 {
@@ -17,7 +18,7 @@ int main(int argc, char* argv[])
 	vector2[1] << ", " << vector2[2] << ")\n";
 
 	double dotProduct;
-	double euclideanNorm;
+	double euclideanNorm1, euclideanNorm2;
 
 	dotProduct = vector1[0] * vector2[0];
 	dotProduct += (vector1[1] * vector2[1]);
@@ -25,7 +26,14 @@ int main(int argc, char* argv[])
 
 	std::cout << "The dot product of these is " << dotProduct
 	<< "\n";
+	
+	double squaresAccumulator = 0;
+	squaresAccumulator = + pow(vector1[0],2)   + pow(vector1[1],2)   + pow(vector1[2],2); 
+	euclideanNorm1 = sqrt(squaresAccumulator);
+	squaresAccumulator = + pow(vector2[0],2)   + pow(vector2[1],2)   + pow(vector2[2],2);
+	euclideanNorm2 = sqrt(squaresAccumulator);
 
-
+	std::cout << "The Euclidean norm of vector 1 is " << euclideanNorm1 << "\n";
+	std::cout << "The Euclidean norm of vector 2 is " << euclideanNorm2 << "\n";
 	return 0;
 }
