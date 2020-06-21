@@ -17,6 +17,30 @@ int main(int argc, char* argv[])
 	{
 		x = 5.0;
 	}
+	
+	//Ex 2
+	if ( (y >= q) && (i == 20) )
+	{
+		x = 5.1;
+	}
+	else
+	{
+		x = p;
+	}
+	
+	//Ex 3
+	if( p > q )
+	{
+		x = 0;
+	}
+	else if( (p <= q) && (i == 10) )
+	{
+		x = 1;
+	}
+	else
+	{
+		x = 2;
+	}
 
 
 	std::cout << "after running the program:\n";
