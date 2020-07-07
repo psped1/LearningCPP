@@ -4,6 +4,7 @@
 *
 */
 #include<iostream>
+#include<cassert>
 
 int main(int argc, char* argv[])
 {
@@ -13,6 +14,8 @@ int main(int argc, char* argv[])
 
 	det = A[0][0]*A[1][1] - A[0][1]*A[1][0];
 	det = 1 / det;
+	
+	assert(det != 0);
 
 	invA[0][0] = det * A[1][1];
 	invA[0][1] = det * -1*A[0][1];
